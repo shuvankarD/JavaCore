@@ -1,5 +1,5 @@
 public class Account extends Bank{
-    private String Name;
+    public String Name;
     private  double Balance;
     private String Account;
     private String PhoneNumber;
@@ -16,12 +16,12 @@ public class Account extends Bank{
 
     public void depositMoney(double depositedMoney){
         this.Balance += depositedMoney;
-        System.out.println("Deposit is Sucessful, New Balance is "+ this.Balance);
+        System.out.println("Deposit is Successful, New Balance is "+ this.Balance);
     }
 
     public void withdrawMoney(double withdrawalMoney){
         if(this.Balance-withdrawalMoney <0){
-            System.out.println("Unsufficent Balance");
+            System.out.println("insufficient Balance");
         }
         else{
             this.Balance -= withdrawalMoney;
@@ -29,44 +29,4 @@ public class Account extends Bank{
         }
     }
 
-
-
-    public String getName() {
-        return Name;
-    }
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getPhoneNumber() {
-        return PhoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public String getAccount() {
-        return Account;
-    }
-
-    public void setAccount(String account) {
-        Account = account;
-    }
-
-    public double getBalance() {
-        return Balance;
-    }
-
-    public void setBalance(double balance) {
-        Balance = balance;
-    }
 }
